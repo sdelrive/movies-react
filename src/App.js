@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // header
 import MenuTop from "./components/MenuTop/MenuTop";
 // paginas
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import Error404 from "./pages/error404";
 import Movie from "./pages/movie";
 import NewMovies from "./pages/new-movies";

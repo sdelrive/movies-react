@@ -20,10 +20,11 @@ export default function MenuTop() {
         <Logo></Logo>
       </div>
       <Menu
+        className="menu"
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={["1"]}
-        style={{ lineHeight: "64px" }}
+        style={{ lineHeight: "64px", width: "100%" }}
         items={items}
       >
         {/* <Menu.Item key="1">
