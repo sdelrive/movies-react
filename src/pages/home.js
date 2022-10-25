@@ -15,6 +15,10 @@ export default function Home() {
     `${URL_API}/movie/now_playing?api_key=${API}&language=es-ES&page=1`
   );
 
+  const topRatedMovies = useFetch(
+    `${URL_API}/movie/top_rated?api_key=${API}&language=es-ES&page=1`
+  );
+
   console.log();
   return (
     <div>

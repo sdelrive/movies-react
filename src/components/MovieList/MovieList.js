@@ -21,9 +21,11 @@ export default function MovieList({ movies, title }) {
   );
 }
 
-function RenderMovie({ id, title, poster_path }) {
+function RenderMovie(props) {
+  const {
+    movie: { id, title, poster_path },
+  } = props;
   const posterPath = `https://image.tmdb.org/t/p/original${poster_path}`;
-
   return (
     <List.Item className="movie-list__movie">
       <List.Item.Meta
@@ -31,7 +33,7 @@ function RenderMovie({ id, title, poster_path }) {
         title={<Link to={`/movie/${id}`}>{title}</Link>}
       />
       <Link to={`/movie/${id}`}>
-        <Button type="primary" shpe="cirlce" icon="right" />
+        <Button type="primary" shpe="cirlce" icon=">" />
       </Link>
     </List.Item>
   );
