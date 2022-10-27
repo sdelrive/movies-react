@@ -5,6 +5,8 @@ import { List, Avatar, Button } from "antd";
 import { Link } from "react-router-dom";
 import Loading from "../Loading/Loading";
 
+import { RightOutlined } from "@ant-design/icons";
+
 export default function MovieList({ movies, title }) {
   if (movies.loading == true || movies.result == null) {
     return <Loading />;
@@ -31,7 +33,7 @@ function RenderMovie({ id, title, poster_path }) {
         title={<Link to={`/movie/${id}`}>{title}</Link>}
       />
       <Link to={`/movie/${id}`}>
-        <Button type="primary" shpe="cirlce" icon="right" />
+        <Button type="primary" shpe="cirlce" icon={<RightOutlined />} />
       </Link>
     </List.Item>
   );
